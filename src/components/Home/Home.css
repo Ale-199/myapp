@@ -1,0 +1,251 @@
+.bg2 {
+  display: block;
+  width: 80%;
+  height: 55%;
+  position: absolute;
+  rotate: -15deg;
+  top: -150px;
+  transition: all 0.3s ease-in;
+  animation: bg2animate 4s linear infinite;
+}
+
+@keyframes bg2animate {
+  50% {
+    top: -130px;
+  }
+}
+
+.home__section {
+  background-color: var(--body-color2);
+}
+
+.home__container {
+  display: flex;
+  justify-content: space-around;
+  height: 100vh;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.home__left {
+  position: relative;
+  width: 50%;
+}
+
+.home__developer {
+  margin-left: 5rem;
+  position: relative;
+  bottom: 2.8rem;
+}
+
+.home__btn {
+  margin: 1rem 0 0 7rem;
+}
+
+.intro {
+  position: relative;
+  color: var(--primary-color);
+  font-weight: var(--font-bold);
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+.intro > :nth-child(2) {
+  margin-top: -1rem;
+  margin-left: 2rem;
+}
+
+.intro > :nth-child(4) {
+  margin-top: 1.1rem;
+  margin-left: 2rem;
+  line-height: 1;
+  font-size: 1.5rem;
+  color: var(--third-color);
+  text-align: start;
+}
+
+.line {
+  margin: 1.5rem 0 1.5rem 2rem;
+  border-top: 7px solid #7f00ff;
+  height: 6px;
+  width: 70px;
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* --------------for extra large devices------------ */
+@media screen and (max-width: 1280px) {
+  .me {
+    width: 90%;
+  }
+  .home__container {
+    justify-content: space-between;
+  }
+  .me {
+    width: 100%;
+  }
+  .home__left {
+    width: 90%;
+  }
+  .home__right {
+    margin-top: 90px;
+  }
+  .home__container {
+    height: 70vh;
+  }
+
+  .bg2 {
+    width: 80%;
+    height: 45%;
+    position: absolute;
+    rotate: -15deg;
+    top: -110px;
+    transition: all 0.3s ease-in;
+    animation: bg2animate 4s linear infinite;
+  }
+
+  @keyframes bg2animate {
+    50% {
+      top: -100px;
+    }
+  }
+}
+
+/* -----------for large devices------------ */
+@media screen and (max-width: 1112.5px) {
+  .home__left {
+    width: 100%;
+  }
+}
+
+/* for medium devices */
+@media screen and (max-width: 896.5px) {
+  .intro {
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+  }
+  .intro > :nth-child(4) {
+    margin-top: 0.8rem;
+    margin-left: 2rem;
+    line-height: 1;
+    font-size: 0.88rem;
+    color: var(--third-color);
+    text-align: start;
+  }
+  .home__btn {
+    margin: 0rem 0 0 7rem;
+    font-size: 1rem;
+  }
+  .home__container {
+    height: 67vh;
+  }
+  .bg2 {
+    display: block;
+    width: 80%;
+    height: 45%;
+    position: absolute;
+    rotate: -15deg;
+    top: -90px;
+    transition: all 0.3s ease-in;
+    animation: bg2animate 4s linear infinite;
+  }
+
+  @keyframes bg2animate {
+    50% {
+      top: -80px;
+    }
+  }
+}
+
+/* --------------------for tablets------------------- */
+@media screen and (max-width: 642.5px) {
+  .home__container {
+    height: 46vh;
+  }
+
+  .intro {
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+  }
+  .line {
+    margin: 1.5rem 0 0.3rem 2rem;
+    border-top: 4px solid #7f00ff;
+    height: 4px;
+    width: 50px;
+  }
+  .home__left {
+    margin-top: 100px;
+  }
+  .intro > :nth-child(2) {
+    margin-top: -0.5rem;
+    margin-bottom: -1rem;
+  }
+  .home__developer {
+    margin-left: 3.5rem;
+    position: relative;
+    bottom: 1.35rem;
+  }
+  .intro > :nth-child(4) {
+    margin-top: 0.7rem;
+    font-size: 0.7rem;
+  }
+  .home__btn {
+    width: 6rem;
+    margin: 0rem 0 0 6rem;
+    padding: 0.7rem;
+    font-size: 0.5rem;
+  }
+}
+/* ------------------for mobile devices---------------- */
+@media screen and (max-width: 400px) {
+  .home__container {
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+  }
+  .bg2 {
+    width: 100%;
+    height: 40%;
+    position: absolute;
+    rotate: -15deg;
+    top: -90px;
+    transition: all 0.3s ease-in;
+    animation: bg2animate 4s linear infinite;
+  }
+  @keyframes bg2animate {
+    50% {
+      top: -80px;
+    }
+  }
+  .intro {
+    text-align: center;
+    font-size: 2rem;
+  }
+  .intro > :nth-child(2) {
+    margin-top: 0rem;
+    margin-left: 0rem;
+  }
+  .intro > :nth-child(4) {
+    margin-top: 4rem;
+    font-size: 1.3rem;
+    margin-left: 0rem;
+    text-align: center;
+  }
+  .home__btn {
+    width: 14rem;
+    margin: 1rem 4.5rem;
+    padding: 0.7rem;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .line {
+    margin: 1rem 0 0rem 0rem;
+    border-top: 4px solid white;
+    height: 0px;
+    width: 0px;
+  }
+
+  .me{
+    margin-top: -150px;
+  }
+}

@@ -1,0 +1,127 @@
+.about__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2rem;
+  align-items: center;
+}
+
+.about__left {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.about__img1 {
+  height: 40%;
+  width: 40%;
+  border-radius: 8px;
+  position: absolute;
+  object-fit: cover;
+  top: 30px;
+  right: 40px;
+  min-width: 40%;
+}
+
+.about__img2 {
+  width: 20px;
+  height: 20px;
+  border-radius: 5%;
+  position: relative;
+  left: 10px;
+  bottom: 50px;
+  object-fit: cover;
+}
+
+.sqaure1 {
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  left: 160px;
+  top: 140px;
+  opacity: 0.8;
+  transition: all 0.3s ease-in;
+}
+
+.sqaure1:hover {
+  background-color: var(--body-color2);
+  border: 2px solid var(--primary-color);
+}
+
+.sqaure2 {
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  bottom: 110px;
+  right: 200px;
+  rotate: 60deg;
+  transition: all 0.3s ease-in;
+}
+
+.sqaure2:hover {
+  opacity: 0.8;
+  background-color: var(--primary-color);
+}
+
+.about__intro {
+  margin-bottom: 4rem;
+  padding: 0rem 1.2rem 1.2rem 1.2rem;
+}
+
+.about__intro > h1 {
+  color: var(--primary-color);
+  font-size: 2.8rem;
+}
+
+.about__intro > h1 > span {
+  color: var(--second-color);
+  font-size: 2.2rem;
+}
+
+.about__intro > h2 {
+  font-size: 2.2rem;
+  color: var(--primary-color);
+}
+
+.about__intro > h3 {
+  font-size: 1.2rem;
+  color: var(--text--color);
+  font-weight: 600;
+}
+
+.about__details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding: 1.2rem;
+  font-size: 1.2rem;
+}
+
+.info__detail > h3 {
+  color: var(--forth-color);
+}
+
+.info__detail > h4 {
+  color: var(--text--color);
+  font-weight: 600;
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* for extra large devices */
+@media screen and (max-width: 1280px) {
+}
+/* for large devices */
+@media screen and (max-width: 1112.5px) {
+}
+/* for medium devices */
+@media screen and (max-width: 896.5px) {
+}
+/* for tablets */
+@media screen and (max-width: 642.5px) {
+}
+/* for mobile devices */
+@media screen and (max-width: 400px) {
+}

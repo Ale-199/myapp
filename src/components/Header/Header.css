@@ -1,0 +1,155 @@
+.bx {
+  color: var(--forth-color);
+}
+
+.container > h1 {
+  color: var(--second-color);
+  padding: 0 0.5rem;
+}
+
+.container > h1 > span {
+  color: var(--third-color);
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 99;
+}
+
+.links {
+  display: flex;
+  gap: 2rem;
+  color: var(--third-color);
+}
+
+.links > li > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.5rem;
+  padding: 0.3rem;
+  transition: all 0.3s ease-in;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.links > li > a:hover {
+  color: var(--third-color);
+  opacity: 0.7;
+}
+
+.links > li > a > i {
+  font-size: 1.9rem;
+}
+
+.nav {
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 1rem;
+  font-size: 1.5rem;
+}
+
+.scroll-header {
+  box-shadow: 0 -1px 40px rgba(0, 0, 0, 0.15);
+}
+
+.nav__close,
+.nav__toggle {
+  display: none;
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* for extra large devices */
+@media screen and (max-width: 1280px) {
+  .container > h1 {
+    padding: 0 0.2rem;
+  }
+
+  .links > li > a > i {
+    font-size: 2rem;
+  }
+
+  .nav {
+    height: 3rem;
+    font-size: 1.2rem;
+  }
+}
+/* for large devices */
+@media screen and (max-width: 1112.5px) {
+}
+/* for medium devices */
+@media screen and (max-width: 896.5px) {
+  .links > li > a > i {
+    font-size: 1rem;
+  }
+}
+/* for tablets */
+@media screen and (max-width: 642.5px) {
+  .container > h1 {
+    font-size: 1.2rem;
+  }
+  .links > li > a {
+    column-gap: 0.2rem;
+    padding: 0.3rem;
+    font-size: 0.9rem;
+  }
+}
+/* for mobile devices */
+@media screen and (max-width: 400px) {
+  .header {
+    top: initial;
+    bottom: 0;
+    background-color: var(--body-color2);
+    box-shadow: 0 -1px 40px rgba(0, 0, 0, 0.15);
+  }
+
+  .links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .links > li {
+    display: flex;
+  }
+
+  .nav__close {
+    position: absolute;
+    top: 0.7rem;
+    right: 1.8rem;
+    font-size: 1.5rem;
+    rotate: 45deg;
+  }
+
+  .nav__close,
+  .nav__toggle {
+    display: block;
+  }
+
+  .nav__toggle {
+    font-size: 2rem;
+    margin-top: 0.2rem;
+    margin-right: 2rem;
+  }
+
+  .small__nav {
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--body-color2);
+    padding: 3rem 1.5rem 1.5rem;
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 1.5rem 1.5rem 0 0;
+    transition: 0.3s;
+  }
+  /* Show bottom nav */
+  .show-nav {
+    bottom: 0;
+  }
+}

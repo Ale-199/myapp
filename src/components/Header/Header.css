@@ -91,16 +91,13 @@
 /* for tablets */
 @media screen and (max-width: 642.5px) {
   .container > h1 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
   .links > li > a {
     column-gap: 0.2rem;
     padding: 0.3rem;
-    font-size: 0.9rem;
+    font-size: 1.3rem;
   }
-}
-/* for mobile devices */
-@media screen and (max-width: 400px) {
   .header {
     top: initial;
     bottom: 0;
@@ -122,8 +119,12 @@
     position: absolute;
     top: 0.7rem;
     right: 1.8rem;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     rotate: 45deg;
+  }
+
+  .links > li > a > i {
+    font-size: 1.9rem;
   }
 
   .nav__close,
@@ -151,5 +152,19 @@
   /* Show bottom nav */
   .show-nav {
     bottom: 0;
+  }
+}
+/* for mobile devices */
+@media screen and (max-width: 400px) {
+  .small__nav {
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--body-color2);
+    padding: 3rem 1.5rem 1.5rem;
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 1.5rem 1.5rem 0 0;
+    transition: 0.3s;
   }
 }

@@ -159,13 +159,9 @@
 
 /* --------------------for tablets------------------- */
 @media screen and (max-width: 642.5px) {
-  .home__container {
-    height: 46vh;
-  }
-
   .intro {
     margin-bottom: 0.5rem;
-    font-size: 0.8rem;
+    font-size: 1.5rem;
   }
   .line {
     margin: 1.5rem 0 0.3rem 2rem;
@@ -186,14 +182,33 @@
     bottom: 1.35rem;
   }
   .intro > :nth-child(4) {
-    margin-top: 0.7rem;
-    font-size: 0.7rem;
+    margin-top: 3rem;
+    font-size: 1.4rem;
   }
   .home__btn {
-    width: 6rem;
-    margin: 0rem 0 0 6rem;
+    width: 15rem;
+    margin: 2rem 0 1rem 7rem;
     padding: 0.7rem;
-    font-size: 0.5rem;
+    font-size: 1.5rem;
+  }
+  .home__container {
+    flex-direction: column;
+    height: 100vh;
+  }
+  .home__right {
+    margin-top: -4rem;
+  }
+  .me {
+    width: 100%;
+  }
+  .bg2 {
+    top: -100px;
+    left: 100px;
+  }
+  @keyframes bg2animate {
+    50% {
+      top: -80px;
+    }
   }
 }
 /* ------------------for mobile devices---------------- */
@@ -208,13 +223,13 @@
     height: 40%;
     position: absolute;
     rotate: -15deg;
-    top: -90px;
+    top: -100px;
     transition: all 0.3s ease-in;
     animation: bg2animate 4s linear infinite;
   }
   @keyframes bg2animate {
     50% {
-      top: -80px;
+      top: -90px;
     }
   }
   .intro {
@@ -232,11 +247,12 @@
     text-align: center;
   }
   .home__btn {
+    display: flex;
     width: 14rem;
-    margin: 1rem 4.5rem;
+    margin: 1rem auto;
     padding: 0.7rem;
     font-size: 1.5rem;
-    text-align: center;
+    justify-content: center;
   }
   .line {
     margin: 1rem 0 0rem 0rem;
@@ -245,7 +261,7 @@
     width: 0px;
   }
 
-  .me{
+  .me {
     margin-top: -150px;
   }
 }

@@ -136,15 +136,15 @@ img {
   }
 }
 
-/* for large devices */
+/* -----------------for large devices-------------- */
 @media screen and (max-width: 1112.5px) {
 }
-/* for medium devices */
+/*-------------------for medium devices--------------- */
 @media screen and (max-width: 896.5px) {
 }
-/* for tablets */
+/* ---------------------for tablets----------------- */
 @media screen and (max-width: 642.5px) {
 }
-/* for mobile devices */
+/* ----------------for mobile devices------------------ */
 @media screen and (max-width: 400px) {
 }

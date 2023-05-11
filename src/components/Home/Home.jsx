@@ -47,7 +47,7 @@ export default function Home() {
 
         {/* right sie */}
         <div className="home__right">
-          <img src={me} alt="" className="me"/>
+          <img src={me} alt="" className="me" />
         </div>
       </div>
     </section>

@@ -1,7 +1,6 @@
 import React from "react";
 import "./About.css";
-import img1 from "../../assets/img1.jpg";
-import img2 from "../../assets/img2.jpg";
+import img1 from "../../assets/image.jpg";
 
 export default function About() {
   return (
@@ -9,12 +8,9 @@ export default function About() {
       <div className="about__container container">
         {/* left side */}
         <div className="about__left">
-          
-            <div className="sqaure1"></div>
-            <img src={img1} alt="img1" className="about__img1" />
-            <img src={img2} alt="img2" className="about__img2" />
-            <div className="sqaure2"></div>
-         
+          <div className="about__me-image">
+            <img src={img1} alt="img1" />
+          </div>
         </div>
 
         {/* right side */}

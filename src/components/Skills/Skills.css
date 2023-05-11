@@ -1,0 +1,47 @@
+.skills__title {
+  text-align: center;
+}
+
+.skills__icons {
+  margin-top: 3rem;
+  margin-right: 5rem;
+}
+
+.skils__container {
+  padding: 2rem;
+}
+
+.icon {
+  text-align: center;
+}
+
+.icon > i {
+  font-size: 4rem;
+  color: var(--third-color);
+}
+
+.icon > h4 {
+  color: var(--forth-color);
+}
+.swiper-button-next {
+  margin-right: -0.55rem;
+}
+.swiper-button-prev {
+  margin-left: -0.55rem;
+}
+
+/*=============== BREAKPOINTS ===============*/
+@media screen and (max-width: 1280px) {
+}
+/* -----------------for large devices-------------- */
+@media screen and (max-width: 1112.5px) {
+}
+/*-------------------for medium devices--------------- */
+@media screen and (max-width: 896.5px) {
+}
+/* ---------------------for tablets----------------- */
+@media screen and (max-width: 642.5px) {
+}
+/* ----------------for mobile devices------------------ */
+@media screen and (max-width: 400px) {
+}

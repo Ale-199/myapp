@@ -86,16 +86,14 @@ img {
 }
 
 .section__title {
-  font-size: var(--h2-font-size);
-  font-weight: var(--font-bold);
-  margin-bottom: 1.75rem;
+  font-size: 2.4rem;
+  font-weight: 900;
   color: var(--primary-color);
 }
 
 .section__subtitle {
-  font-size: var(--h3-font-size);
-  margin-left: 0.875rem;
-  font-weight: var(--font-bold);
+  font-size: 1.1rem;
+  font-weight: 700;
   color: var(--text--color);
 }
 
@@ -144,7 +142,19 @@ img {
 }
 /* ---------------------for tablets----------------- */
 @media screen and (max-width: 642.5px) {
+  .section__title {
+    font-size: 2rem;
+  }
+  .section__subtitle {
+    font-size: 1rem;
+  }
 }
 /* ----------------for mobile devices------------------ */
 @media screen and (max-width: 400px) {
+  .section__title {
+    font-size: 1.7rem;
+  }
+  .section__subtitle {
+    font-size: 0.8rem;
+  }
 }

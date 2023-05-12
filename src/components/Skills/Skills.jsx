@@ -13,9 +13,9 @@ import { Navigation } from "swiper";
 
 export default function Skills() {
   return (
-    <section className="section">
+    <section className="section" id="skills">
       <div className="skils__container container">
-        <div className="skills__title">
+        <div className="section__title-contaniner">
           <h2 className="section__title ">What Skills I have</h2>
           <h3 className="section__subtitle">My experiences</h3>
         </div>

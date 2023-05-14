@@ -14,6 +14,10 @@ const Projects = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit dignissimos maiores veritatis qui voluptates quae alias placeat ipsa",
     toggleState: 1,
+    learn1: "adipisicing elit. Suscipit dignissimos maiores",
+    learn2: "adipisicing elit. Suscipit dignissimos maiores",
+    githubLink: "https://github.com/",
+    demoLink: "https://www.google.com",
   },
   {
     id: 2,
@@ -23,6 +27,10 @@ const Projects = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit dignissimos maiores veritatis qui voluptates quae alias placeat ipsa",
     toggleState: 2,
+    learn1: "adipisicing elit. Suscipit dignissimos maiores",
+    learn2: "adipisicing elit. Suscipit dignissimos maiores",
+    githubLink: "https://github.com/",
+    demoLink: "https://www.google.com",
   },
   {
     id: 3,
@@ -32,6 +40,10 @@ const Projects = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit dignissimos maiores veritatis qui voluptates quae alias placeat ipsa",
     toggleState: 3,
+    learn1: "adipisicing elit. Suscipit dignissimos maiores",
+    learn2: "adipisicing elit. Suscipit dignissimos maiores",
+    githubLink: "https://github.com/",
+    demoLink: "https://www.google.com",
   },
   ,
   {
@@ -42,6 +54,10 @@ const Projects = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit dignissimos maiores veritatis qui voluptates quae alias placeat ipsa",
     toggleState: 4,
+    learn1: "adipisicing elit. Suscipit dignissimos maiores",
+    learn2: "adipisicing elit. Suscipit dignissimos maiores",
+    githubLink: "https://github.com/",
+    demoLink: "https://www.google.com",
   },
   ,
   {
@@ -52,6 +68,10 @@ const Projects = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit dignissimos maiores veritatis qui voluptates quae alias placeat ipsa",
     toggleState: 5,
+    learn1: "adipisicing elit. Suscipit dignissimos maiores",
+    learn2: "adipisicing elit. Suscipit dignissimos maiores",
+    githubLink: "https://github.com/",
+    demoLink: "https://www.google.com",
   },
   ,
   {
@@ -62,6 +82,10 @@ const Projects = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit dignissimos maiores veritatis qui voluptates quae alias placeat ipsa",
     toggleState: 6,
+    learn1: "adipisicing elit. Suscipit dignissimos maiores",
+    learn2: "adipisicing elit. Suscipit dignissimos maiores",
+    githubLink: "https://github.com/",
+    demoLink: "https://www.google.com",
   },
 ];
 

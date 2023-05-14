@@ -78,11 +78,15 @@ img {
 
 .section {
   padding-top: 7rem;
-  padding-bottom: 2rem;
+  padding-bottom: 3rem;
 }
 
 .section-blue {
   background-color: var(--body-color);
+}
+
+.section-white {
+  background-color: var(--body-color2);
 }
 
 .section__title-contaniner {
@@ -96,7 +100,7 @@ img {
 }
 
 .section__subtitle {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   font-weight: 700;
   color: var(--text--color);
 }

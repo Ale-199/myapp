@@ -13,7 +13,7 @@ import { Navigation } from "swiper";
 
 export default function Skills() {
   return (
-    <section className="section" id="skills">
+    <section className="section section-white" id="skills">
       <div className="skils__container container">
         <div className="section__title-contaniner">
           <h2 className="section__title ">What Skills I have</h2>

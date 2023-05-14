@@ -32,19 +32,19 @@ export default function About() {
 
           <div className="about__details">
             <div className="info__detail">
-              <h3>Name:</h3>
+              <h3>Name</h3>
               <h4>Alejandro</h4>
             </div>
             <div className="info__detail info__right">
-              <h3>:Education</h3>
+              <h3>Education</h3>
               <h4>Centennial College</h4>
             </div>
             <div className="info__detail ">
-              <h3>Email:</h3>
+              <h3>Email</h3>
               <h4>ale0720199@gmail.com</h4>
             </div>
             <div className="info__detail info__right">
-              <h3>:Employment</h3>
+              <h3>Employment</h3>
               <h4>Open</h4>
             </div>
           </div>

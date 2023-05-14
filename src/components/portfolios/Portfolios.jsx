@@ -3,14 +3,21 @@ import "./Portfolio.css";
 import Projects from "./Projects";
 
 export default function Portfolios() {
-  const [datas, setData] = useState(Projects);
+  const [datas, setDatas] = useState(Projects);
   const [toggleState, setToggleState] = useState(0);
 
+  const filteredProjects = (category) => {
+    const updated = Projects.filter((curPro) => {
+      return curPro.category === category;
+    });
+
+    setDatas(updated);
+  };
   const toggleTab = (index) => {
     setToggleState(index);
   };
   return (
-    <section className="section-blue section" id="portfolio">
+    <section className="section-blue section" id="projects">
       <div className="portfolio__container container">
         <div className="section__title-contaniner">
           <h2 className="section__title">Portfolios</h2>
@@ -18,11 +25,11 @@ export default function Portfolios() {
         </div>
 
         <div className="portfolio__filter">
-          <span>All</span>
-          <span>MERN</span>
-          <span>Next JS</span>
-          <span>HTML & CSS</span>
-          <span>JavaScript</span>
+          <span onClick={() => setDatas(Projects)}>All</span>
+          <span onClick={() => filteredProjects("MERN")}>MERN</span>
+          <span onClick={() => filteredProjects("NEXTJS")}>Next JS</span>
+          <span onClick={() => filteredProjects("HTML")}>HTML & CSS</span>
+          <span onClick={() => filteredProjects("JS")}>JavaScript</span>
         </div>
 
         <div className="projects__container">
@@ -31,7 +38,12 @@ export default function Portfolios() {
               <img src={data.image} alt="" />
               <div className="layer">
                 <h5>{data.title}</h5>
-                <p onClick={() => toggleTab(data.toggleState)}>Check it out</p>
+                <div className="layer-box">
+                  <i class="bx bx-link-external"></i>
+                  <p onClick={() => toggleTab(data.toggleState)}>
+                    Check it out
+                  </p>
+                </div>
               </div>
 
               <div
@@ -52,18 +64,18 @@ export default function Portfolios() {
                   <ul>
                     <li>
                       <i class="bx bx-edit-alt"></i>
-                      Lorem ipsum is placeholder text commonly
+                      {data.learn1}
                     </li>
                     <li>
                       <i class="bx bx-edit-alt"></i>
-                      Lorem ipsum is placeholder text commonly
+                      {data.learn2}
                     </li>
                   </ul>
                   <div className="projects__btns">
-                    <a href="" className="btn">
+                    <a href={data.githubLink} className="btn" target="_blank">
                       <i class="bx bxl-github"></i>Github
                     </a>
-                    <a href="" className="btn">
+                    <a href={data.demoLink} className="btn" target="_blank">
                       <i class="bx bx-link-alt"></i>Live Demo
                     </a>
                   </div>

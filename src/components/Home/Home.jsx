@@ -26,7 +26,7 @@ export default function Home() {
   }, []);
 
   return (
-    <section className="home__section">
+    <section className="section-white">
       <div className="home__container container" id="home">
         {/* left side */}
         <div className="home__left">

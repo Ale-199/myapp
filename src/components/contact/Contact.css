@@ -160,15 +160,18 @@
     margin-left: 0rem;
   }
   .contact__left > h1 {
+    text-align: center;
     font-size: 2rem;
   }
   .contact__left > h3 {
-    font-size: 0.9rem;
+    font-size: 1rem;
+    justify-content: center;
   }
   .contact__form-div {
     height: 4rem;
     margin: 2rem 0rem;
   }
+
   .contact__textarea {
     height: 14rem;
     resize: none;
@@ -180,20 +183,32 @@
     margin-left: 0rem;
     width: 100%;
   }
+  .contact__container {
+    margin-top: 2rem;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .contact__item {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .contact__item > i {
+    width: 40%;
+    margin: 0 auto;
+  }
+  .contact__item-tittle > h3 {
+    font-size: 1.3rem;
+  }
 }
 /* ----------------for mobile devices------------------ */
 @media screen and (max-width: 400px) {
-  .contact__container {
-    margin-top: 2rem;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-  }
   .contact__form {
     width: 100%;
   }
   .contact__item {
     gap: 0.3rem;
     padding: 1rem 0.5rem;
-
   }
 }

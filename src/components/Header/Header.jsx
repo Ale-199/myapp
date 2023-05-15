@@ -41,8 +41,8 @@ export default function Header() {
               </a>
             </li>
             <li>
-              <a href="#contect">
-                <i className="bx bx-mail-send"></i>Contect Me
+              <a href="#contact">
+                <i className="bx bx-mail-send"></i>Contact Me
               </a>
             </li>
           </ul>

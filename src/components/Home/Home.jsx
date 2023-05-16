@@ -4,7 +4,10 @@ import bg2 from "../../assets/bg2.png";
 import me from "../../assets/me.png";
 import Typed from "typed.js";
 import { useEffect, useRef } from "react";
+import { motion } from "framer-motion";
+
 export default function Home() {
+  const transition = { type: "spring", duration: 4 };
   //Create Ref Element
   const el = useRef(null);
 
@@ -26,8 +29,8 @@ export default function Home() {
   }, []);
 
   return (
-    <section className="section-white">
-      <div className="home__container container" id="home">
+    <section className="section-white" >
+      <div className="home__container container" id="home" >
         {/* left side */}
         <div className="home__left">
           <img src={bg2} alt="" className="bg2" />
@@ -46,9 +49,14 @@ export default function Home() {
         </div>
 
         {/* right sie */}
-        <div className="home__right">
+        <motion.div
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={transition}
+          className="home__right"
+        >
           <img src={me} alt="" className="me" />
-        </div>
+        </motion.div>
       </div>
     </section>
   );

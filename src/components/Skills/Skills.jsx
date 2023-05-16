@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import { motion, useInView, useAnimation } from "framer-motion";
 import "./Skills.css";
 
 // Import Swiper React components
@@ -12,8 +13,30 @@ import "swiper/css/navigation";
 import { Navigation } from "swiper";
 
 export default function Skills() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  const mainControls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    }
+  }, [isInView]);
+
   return (
-    <section className="section section-white" id="skills">
+    <motion.section
+      className="section section-white"
+      id="skills"
+      ref={ref}
+      variants={{
+        hidden: { opacity: 0, y: 75 },
+        visible: { opacity: 1, y: 0 },
+      }}
+      initial="hidden"
+      animate={mainControls}
+      transition={{ duration: 0.5, delay: 0.25 }}
+    >
       <div className="skils__container container">
         <div className="section__title-contaniner">
           <h2 className="section__title ">What Skills I have</h2>
@@ -94,6 +117,6 @@ export default function Skills() {
           </SwiperSlide>
         </Swiper>
       </div>
-    </section>
+    </motion.section>
   );
 }

@@ -1,8 +1,22 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
+import { motion, useInView, useAnimation } from "framer-motion";
 import "./Contact.css";
 import emailjs from "@emailjs/browser";
 
 export default function Contact() {
+  //animation
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  const mainControls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    }
+  }, [isInView]);
+
+  //emailjs
   const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
@@ -25,7 +39,18 @@ export default function Contact() {
     e.target.reset();
   };
   return (
-    <section className="section contact__section" id="contact">
+    <motion.section
+      className="section contact__section"
+      id="contact"
+      ref={ref}
+      variants={{
+        hidden: { opacity: 0, y: 75 },
+        visible: { opacity: 1, y: 0 },
+      }}
+      initial="hidden"
+      animate={mainControls}
+      transition={{ duration: 0.5, delay: 0.25 }}
+    >
       <div className="container">
         <div className="section__title-contaniner">
           <h2 className="section__title">Contact Me</h2>
@@ -104,6 +129,6 @@ export default function Contact() {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

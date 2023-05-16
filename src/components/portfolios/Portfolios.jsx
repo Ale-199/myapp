@@ -1,8 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import { motion, useInView, useAnimation } from "framer-motion";
 import "./Portfolio.css";
 import Projects from "./Projects";
 
 export default function Portfolios() {
+  //animation
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  const mainControls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    }
+  }, [isInView]);
+
+  //filter
   const [datas, setDatas] = useState(Projects);
   const [toggleState, setToggleState] = useState(0);
 
@@ -17,7 +31,18 @@ export default function Portfolios() {
     setToggleState(index);
   };
   return (
-    <section className="section-blue section" id="projects">
+    <motion.section
+      className="section-blue section"
+      id="projects"
+      ref={ref}
+      variants={{
+        hidden: { opacity: 0, y: 75 },
+        visible: { opacity: 1, y: 0 },
+      }}
+      initial="hidden"
+      animate={mainControls}
+      transition={{ duration: 0.5, delay: 0.25 }}
+    >
       <div className="portfolio__container container">
         <div className="section__title-contaniner">
           <h2 className="section__title">Portfolios</h2>
@@ -85,6 +110,6 @@ export default function Portfolios() {
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
